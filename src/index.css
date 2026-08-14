@@ -1,0 +1,113 @@
+@import "tailwindcss";
+
+:root {
+  color-scheme: dark;
+
+  --gs-bg: #08111f;
+  --gs-bg-elevated: #0c1628;
+  --gs-card: #111827;
+  --gs-card-hover: #152033;
+  --gs-primary: #0ea5e9;
+  --gs-primary-hover: #38bdf8;
+  --gs-primary-muted: rgba(14, 165, 233, 0.14);
+  --gs-success: #22c55e;
+  --gs-success-muted: rgba(34, 197, 94, 0.14);
+  --gs-warning: #f59e0b;
+  --gs-danger: #ef4444;
+  --gs-text: #f8fafc;
+  --gs-heading: #ffffff;
+  --gs-secondary: #94a3b8;
+  --gs-muted: #64748b;
+  --gs-border: rgba(148, 163, 184, 0.14);
+  --gs-border-strong: rgba(148, 163, 184, 0.22);
+  --gs-shadow: 0 18px 48px rgba(2, 6, 23, 0.45);
+  --gs-shadow-sm: 0 8px 24px rgba(2, 6, 23, 0.35);
+  --gs-radius: 1rem;
+  --gs-radius-lg: 1.25rem;
+  --gs-radius-sm: 0.75rem;
+  --gs-focus: 0 0 0 3px rgba(14, 165, 233, 0.35);
+  --gs-nav-height: 4.25rem;
+  --gs-font-display: "Sora", "Segoe UI", sans-serif;
+  --gs-font-body: "Plus Jakarta Sans", "Segoe UI", sans-serif;
+
+  font-family: var(--gs-font-body);
+  line-height: 1.55;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background: var(--gs-bg);
+  color: var(--gs-text);
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0 !important;
+  min-width: 320px;
+  min-height: 100vh;
+  font-family: var(--gs-font-body) !important;
+  color: var(--gs-text) !important;
+  background:
+    radial-gradient(ellipse 60% 40% at 0% 0%, rgba(14, 165, 233, 0.18), transparent 55%),
+    radial-gradient(ellipse 50% 35% at 100% 0%, rgba(34, 197, 94, 0.1), transparent 50%),
+    radial-gradient(ellipse 40% 30% at 50% 100%, rgba(14, 165, 233, 0.06), transparent 60%),
+    var(--gs-bg) !important;
+}
+
+#root {
+  min-height: 100vh;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+h1, h2, h3, h4, h5, h6,
+.h1, .h2, .h3, .h4, .h5, .h6 {
+  color: var(--gs-heading) !important;
+  font-family: var(--gs-font-display);
+  font-weight: 700;
+  line-height: 1.15;
+  letter-spacing: -0.02em;
+}
+
+p {
+  color: var(--gs-secondary);
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  flex-shrink: 0;
+}
+
+button,
+input,
+textarea,
+select {
+  font: inherit;
+}
+
+:focus-visible {
+  outline: none;
+  box-shadow: var(--gs-focus);
+}
+
+::selection {
+  background: rgba(14, 165, 233, 0.35);
+  color: #fff;
+}
