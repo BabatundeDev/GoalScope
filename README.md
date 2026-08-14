@@ -1,8 +1,8 @@
 # GoalScope
 
-GoalScope is a premium football analytics platform built with React and Vite. It delivers live match coverage, league standings, top scorers, and detailed match insights through a modern dark UI powered by [API-Football](https://www.api-football.com/).
+GoalScope is a football analytics platform built with React and Vite. It delivers live match coverage, league standings, top scorers, and detailed match insights through a modern dark UI powered by [API-Football](https://www.api-football.com/).
 
-**Live demo:** [babatundedev.github.io/GoalScope](https://babatundedev.github.io/GoalScope)
+**Live demo:** https://babatundedev-goalscope.vercel.app/
 
 ---
 
