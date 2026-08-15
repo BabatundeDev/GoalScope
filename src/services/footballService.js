@@ -51,7 +51,9 @@ const fallbackMatches = [
   }
 ];
 
-const getApiKey = () => import.meta.env.VITE_API_FOOTBALL_KEY?.trim() ?? '';
+const getApiKey = () => {
+  return (import.meta.env.VITE_API_FOOTBALL_KEY ?? '').trim();
+};
 
 export const getCurrentSeason = () => {
   const now = new Date();
@@ -231,18 +233,17 @@ export const getFeaturedLeagues = async () => {
 
   try {
     const season = getCurrentSeason();
-    const results = await Promise.all(
-      FEATURED_LEAGUE_IDS.map(async (id) => {
-        const payload = await apiFetch(`/leagues?id=${id}&season=${season}`);
-        const league = payload?.response?.[0]?.league;
-        const country = payload?.response?.[0]?.country?.name ?? '';
-        return league
-          ? { id: league.id, name: league.name, country, logo: league.logo, season }
-          : null;
-      })
-    );
+    const leagues = [];
 
-    const leagues = results.filter(Boolean);
+    for (const id of FEATURED_LEAGUE_IDS) {
+      const payload = await apiFetch(`/leagues?id=${id}&season=${season}`);
+      const league = payload?.response?.[0]?.league;
+      const country = payload?.response?.[0]?.country?.name ?? '';
+      if (league) {
+        leagues.push({ id: league.id, name: league.name, country, logo: league.logo, season });
+      }
+    }
+
     return { leagues: leagues.length ? leagues : fallback, isFallback: !leagues.length };
   } catch (error) {
     console.warn('Unable to load leagues', error);
