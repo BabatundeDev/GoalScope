@@ -75,7 +75,6 @@ When the API key is missing or unavailable, the app gracefully falls back to pre
 - Node.js 18+
 - npm 9+
 - An [API-Football](https://www.api-football.com/) API key (free tier available)
-```
 
 ## Project structure
 
