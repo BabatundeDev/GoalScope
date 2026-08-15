@@ -154,9 +154,7 @@ Contributions are welcome. Please open an issue or pull request on the repositor
 
 ---
 
-## License
-
-This project is open source. See the repository for license details.
+## Licensed
 
 ---
 
